@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#111111">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="BANIC MX">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<title>BANIC MX | Entregas</title>
+<style>
+:root{--ink:#101114;--muted:#72757e;--line:#e8e8eb;--soft:#f6f6f7;--accent:#d9ff43;--danger:#d93025;--ok:#138a4a;--blue:#9bcf22;--card:#fff;--shadow:0 18px 50px rgba(0,0,0,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,sans-serif;background:linear-gradient(180deg,#fff 0,#fafafa 38%,#fff 100%);color:var(--ink);min-height:100vh;padding-bottom:env(safe-area-inset-bottom)}button,input,select,textarea{font:inherit}button{cursor:pointer}.hidden{display:none!important}
+.appbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}.appbar-inner{max-width:980px;margin:auto;height:66px;padding:0 20px;display:flex;align-items:center;gap:12px}.logo{width:42px;height:42px;border-radius:13px;background:#111;color:#fff;display:grid;place-items:center;font-weight:900;letter-spacing:.08em}.brand strong{display:block;font-size:15px;letter-spacing:.04em}.brand span{font-size:11px;color:var(--muted)}.appbar .spacer{flex:1}.terms-link{font-size:10px;font-weight:800;color:#111;text-decoration:none;padding:9px 11px;border-radius:10px}.terms-link:hover{background:#f1f1f1}.wa-label{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15}.wa-label strong{font-size:10px}.wa-label small{font-size:9px;color:var(--muted);margin-top:2px}.wa-mini{width:41px;height:41px;border:1px solid var(--line);border-radius:13px;background:#fff;color:#128c4b;font-size:18px}
+.hero{max-width:980px;margin:22px auto 0;padding:0 20px}.hero-card{min-height:250px;border-radius:28px;padding:34px;background:linear-gradient(110deg,rgba(0,0,0,.84),rgba(0,0,0,.28)),url('https://i.ibb.co/fdkN4qPg/Chat-GPT-Image-31-jul-2026-06-11-37-p-m.png') center/cover;color:#fff;box-shadow:0 24px 65px rgba(0,0,0,.16);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center}.hero-card:after{display:none}.hero h1{position:relative;z-index:1;font-size:clamp(30px,5vw,50px);margin:0 0 10px;line-height:1.02;max-width:650px}.hero p{position:relative;z-index:1;margin:0;max-width:610px;color:#eee;line-height:1.6;font-size:13px}.hero-badges{position:relative;z-index:1;display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.hero-badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 10px;border-radius:11px;font-size:10px;font-weight:700}
+.main{max-width:980px;margin:auto;padding:18px 20px 58px}.section-title{text-align:left;margin:20px 0 16px}.section-title h2{font-size:clamp(22px,4vw,31px);margin:0 0 6px}.section-title p{margin:0;color:var(--muted);font-size:12px}.method-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}.method{border:1px solid #d8dbe1;background:#fff;color:#111;border-radius:18px;padding:13px 14px;text-align:left;display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;align-items:center;min-height:70px;transition:.18s;box-shadow:0 5px 14px rgba(16,17,20,.035)}.method:hover{transform:translateY(-1px);border-color:#bfc4cc;box-shadow:0 9px 20px rgba(16,17,20,.07)}.method.active{border:1.6px solid #111;background:#fff;box-shadow:0 9px 20px rgba(16,17,20,.08)}.method-icon{width:42px;height:42px;border-radius:13px;background:var(--accent);color:#5e6781;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:inset 0 -2px 0 rgba(0,0,0,.06);margin:0!important;padding:0!important;line-height:1}.method-icon svg{width:21px;height:21px;display:block;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;margin:0}.method-copy{display:flex;flex-direction:column;justify-content:center;min-width:0;margin:0!important}.method-copy strong{display:block;font-size:12px;line-height:1.25;color:#111;font-weight:800}.method-copy small{display:block;color:#6b7280;font-size:8px;margin-top:4px;line-height:1.4}
+.checkout{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(280px,.82fr);gap:16px;align-items:start}.card{background:rgba(255,255,255,.96);border:1px solid #e5e6e8;border-radius:20px;padding:18px;box-shadow:0 12px 34px rgba(0,0,0,.055)}.card+.card{margin-top:13px}.card-head{display:flex;gap:9px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:14px}.step{width:22px;height:22px;background:#111;color:#fff;border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:800}.card-head h3{font-size:13px;margin:0}.label{display:block;font-size:9px;letter-spacing:.07em;font-weight:800;text-transform:uppercase;margin-bottom:6px}.field{position:relative;margin-bottom:11px}.field i{position:absolute;left:12px;top:35px;color:#9aa0a8;font-size:12px}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#fafafa;border-radius:11px;padding:11px 12px;outline:none;color:var(--ink);transition:.2s;font-size:12px}.field.has-icon input{padding-left:35px}.field input:focus,.field select:focus,.field textarea:focus{background:#fff;border-color:#111;box-shadow:0 0 0 3px rgba(0,0,0,.07)}.date-control{position:relative}.native-date{width:100%!important;border:1px solid var(--line)!important;background:#fafafa!important;border-radius:11px!important;padding:11px 12px!important;color:var(--ink)!important;font-size:12px!important;cursor:pointer!important;outline:none!important;min-height:42px!important}.native-date:focus{background:#fff!important;border-color:#111!important;box-shadow:0 0 0 3px rgba(0,0,0,.07)!important}.date-readable{display:flex;align-items:center;gap:7px;margin-top:6px;color:#697586;font-size:10px;min-height:16px}.date-readable i{position:static!important;color:#7c8793!important;font-size:11px!important}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.locations{display:grid;grid-template-columns:1fr 1fr;gap:9px;max-height:390px;overflow:auto;padding-right:3px}.location{border:1px solid var(--line);border-radius:13px;padding:11px;background:#fff;cursor:pointer;transition:.18s}.location:hover{border-color:#bbb}.location.selected{border:2px solid #111;background:#fafafa}.location strong{display:block;font-size:11px}.location small{display:block;color:var(--muted);line-height:1.4;margin-top:4px;font-size:9px}.map{display:inline-flex;align-items:center;gap:5px;color:#5f8f00;font-size:9px;font-weight:700;margin-top:7px;text-decoration:none}
+.branch-filters{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px;padding:2px 0}
+.branch-filter{border:1px solid var(--line);background:#fff;color:#56606e;border-radius:999px;
+padding:7px 11px;font-size:9px;font-weight:800;transition:.18s;white-space:nowrap}
+.branch-filter:hover{border-color:#b9bdc4;background:#fafafa}
+.branch-filter.active{background:var(--accent);border-color:#b8e32f;color:#111;
+box-shadow:0 5px 14px rgba(155,207,34,.18)}
+.branch-empty{grid-column:1/-1;text-align:center;padding:28px 12px;color:var(--muted);
+font-size:10px;border:1px dashed var(--line);border-radius:13px;background:#fafafa}
+@media(max-width:560px){.branch-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:5px;
+scrollbar-width:none}.branch-filters::-webkit-scrollbar{display:none}.branch-filter{flex:none}}
+
+.schedule-note{display:flex;gap:8px;background:#f6f6f7;color:#333;border:1px solid var(--line);border-radius:11px;padding:10px;font-size:10px;line-height:1.45;margin:10px 0}.error-box{display:none;gap:9px;align-items:flex-start;background:#fff0f0;border:1px solid #ffd2d2;color:#a92323;padding:10px;border-radius:11px;font-size:10px;line-height:1.45;margin-top:9px}.error-box.show{display:flex}
+.pay{background:#f7f7f8;border:1px solid var(--line);border-radius:14px;padding:12px}.pay-title{font-size:9px;font-weight:900;color:#111;text-transform:uppercase;letter-spacing:.05em;padding-bottom:9px;border-bottom:1px solid var(--line)}.pay p{font-size:9px;color:#666;line-height:1.5}.bank{font-size:10px;font-weight:800;color:#111}.card-number{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px;display:flex;align-items:center;justify-content:space-between;gap:9px}.card-number small{display:block;font-size:7px;color:#777;text-transform:uppercase}.card-number strong{font-family:ui-monospace,monospace;color:#111;font-size:12px;letter-spacing:.07em}.copy{border:0;border-radius:8px;background:#111;color:#fff;padding:8px 10px;font-size:9px;font-weight:800}.warning{display:flex;gap:7px;background:#fff1f2;border:1px solid #ffd5d8;color:#b62431;padding:10px;border-radius:10px;font-size:9px;line-height:1.45;margin-top:10px}.summary{position:sticky;top:82px}.summary.card{border-color:#dfe1e5}.checkout aside>.card:first-child{margin-top:0}.checkout aside>.card+.card{margin-top:13px}.summary-line{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:10px}.summary-line span:first-child{color:var(--muted)}.submit{width:100%;border:0;border-radius:12px;padding:13px;background:var(--accent);color:#111;font-weight:900;margin-top:13px;box-shadow:0 10px 22px rgba(155,207,34,.28)}.submit:hover{background:#c7ef36}.submit:active{transform:scale(.99)}
+.modal{position:fixed;inset:0;z-index:80;background:rgba(14,18,22,.58);backdrop-filter:blur(6px);display:grid;place-items:center;padding:18px;opacity:0;pointer-events:none;transition:.2s}.modal.open{opacity:1;pointer-events:auto}.modal-card{width:min(390px,100%);background:#fff;border-radius:20px;padding:21px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.22);transform:translateY(14px);transition:.2s}.modal.open .modal-card{transform:none}.modal-icon{width:56px;height:56px;border-radius:18px;background:#fff0f0;color:var(--danger);display:grid;place-items:center;font-size:22px;margin:0 auto 13px}.modal h3{margin:0 0 7px}.modal p{color:var(--muted);font-size:11px;line-height:1.55}.modal button{border:0;background:#111;color:#fff;border-radius:11px;padding:11px 16px;font-weight:800}.toast{position:fixed;left:50%;bottom:22px;z-index:90;transform:translate(-50%,30px);opacity:0;background:#111;color:#fff;border-radius:11px;padding:11px 14px;font-size:10px;box-shadow:var(--shadow);transition:.25s;pointer-events:none}.toast.show{transform:translate(-50%,0);opacity:1}.install{display:none;position:fixed;right:14px;bottom:14px;z-index:45;border:0;border-radius:12px;padding:11px 13px;background:#111;color:#fff;font-size:10px;font-weight:800;box-shadow:var(--shadow)}
+@media(max-width:780px){.checkout{grid-template-columns:1fr}.summary{position:static}.method-grid{grid-template-columns:1fr 1fr}.locations{grid-template-columns:1fr}.hero{margin-top:10px;padding:0 12px}.hero-card{min-height:205px;padding:24px;border-radius:21px}.main{padding:12px 12px 48px}.appbar-inner{height:60px;padding:0 12px}.card{border-radius:15px;padding:14px}.grid2{grid-template-columns:1fr}.section-title{margin:15px 0 13px}.install{bottom:calc(14px + env(safe-area-inset-bottom))}}
+@media(max-width:480px){.method-grid{grid-template-columns:1fr}.hero-badges{display:none}.hero-card{min-height:185px}.hero h1{font-size:29px}.brand span{display:none}}
+@media(display-mode:standalone){.appbar{background:#fff}.install{display:none!important}body{overscroll-behavior-y:none}}
+
+.calendar-trigger{width:100%;border:1px solid var(--line);background:#fafafa;border-radius:12px;padding:12px 13px;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;color:var(--ink);transition:.2s}.calendar-trigger:hover,.calendar-trigger:focus{background:#fff;border-color:#111;box-shadow:0 0 0 3px rgba(0,0,0,.07)}.calendar-trigger-copy{display:flex;align-items:center;gap:10px;min-width:0}.calendar-trigger-copy i{position:static!important;color:#637083!important;font-size:15px!important}.calendar-trigger-copy strong{display:block;font-size:12px}.calendar-trigger-copy small{display:block;color:var(--muted);font-size:9px;margin-top:2px}.calendar-trigger>i{position:static!important;color:#8a929d!important}.calendar-card{width:min(440px,100%);padding:18px;text-align:left}.calendar-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.calendar-top h3{font-size:15px;margin:0;text-transform:capitalize}.calendar-nav{width:38px;height:38px;padding:0!important;border-radius:11px!important;background:#f3f3f4!important;color:#111!important}.calendar-week,.calendar-days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.calendar-week span{text-align:center;color:var(--muted);font-size:9px;font-weight:800;padding:5px 0}.calendar-day{aspect-ratio:1;border:0!important;border-radius:10px!important;background:#f7f7f8!important;color:#17181b!important;padding:0!important;font-size:11px!important;font-weight:700!important}.calendar-day:hover:not(:disabled){background:#e9edda!important}.calendar-day.selected{background:var(--accent)!important;color:#111!important;box-shadow:inset 0 0 0 2px #111}.calendar-day.today{box-shadow:inset 0 0 0 1px #111}.calendar-day:disabled{opacity:.25;cursor:not-allowed}.calendar-day.empty{visibility:hidden}.calendar-hours-title{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;margin:16px 0 8px}.calendar-hours{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;max-height:170px;overflow:auto}.time-chip{border:1px solid var(--line)!important;background:#fff!important;color:#222!important;border-radius:10px!important;padding:9px 5px!important;font-size:10px!important;font-weight:700!important}.time-chip.selected{background:#111!important;color:#fff!important;border-color:#111!important}.calendar-empty{grid-column:1/-1;background:#fff1f2;border:1px solid #ffd5d8;color:#b62431;border-radius:10px;padding:10px;font-size:10px;line-height:1.4}.calendar-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}.calendar-actions .secondary{background:#f2f2f3!important;color:#111!important}.calendar-actions button:disabled{opacity:.4;cursor:not-allowed}
+
+.address-tabs{display:flex;gap:8px;margin:12px 0}.address-tab{border:1px solid #dce0e5;background:#fff;padding:10px 14px;border-radius:11px;font-size:11px;font-weight:800}.address-tab.active{background:var(--accent);border-color:#b8e32f}.address-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.address-field label{display:block;font-size:10px;font-weight:750;margin-bottom:5px}.address-field input,.address-field textarea{width:100%;padding:11px;border:1px solid #bed1e9;border-radius:7px;background:#fff;font-size:12px;min-height:38px}.address-field textarea{resize:vertical;min-height:65px}.address-field .required{color:#d93025}.address-help{font-size:10px;color:var(--muted);margin:9px 0}@media(max-width:560px){.address-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="appbar"><div class="appbar-inner"><div class="logo">B</div><div class="brand"><strong>BANIC MX</strong><span>Ropa, calzado y más</span></div><div class="spacer"></div><span class="wa-label"><strong>Asistencia personal</strong><small>¿Dudas?</small></span><button class="wa-mini" onclick="openBaseWhatsApp()" aria-label="Abrir asistencia por WhatsApp"><i class="fa-brands fa-whatsapp"></i></button></div></header>
+<section class="hero"><div class="hero-card"><h1>Recibe tu compra de forma fácil y segura</h1><p>Selecciona entrega personal, Paquetería Casa Blanca o Correos de México. Completa tus datos, revisa el pago y envía toda la información de tu pedido.</p><div class="hero-badges"><span class="hero-badge"><i class="fa-solid fa-calendar-check"></i> Agenda validada</span><span class="hero-badge"><i class="fa-solid fa-location-dot"></i> Ubicaciones exactas</span><span class="hero-badge"><i class="fa-brands fa-whatsapp"></i> Confirmación inmediata</span></div></div></section>
+<main class="main">
+<div class="section-title"><h2>Elige tu método de entrega</h2><p>Al seleccionar una opción aparecerá únicamente la información necesaria.</p></div>
+<div class="method-grid"><button class="method" id="personalBtn" onclick="selectMethod('personal')"><span class="method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M6.5 20v-2.3c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5V20"/><path d="M9 14.2 7.5 17M15 14.2l1.5 2.8"/></svg></span><span class="method-copy"><strong>Entrega personal</strong><small>Agenda día y hora en uno de los puntos disponibles de Tonalá.</small></span></button><button class="method" id="cbBtn" onclick="selectMethod('cb')"><span class="method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7.2 12 3l8 4.2v9.4L12 21l-8-4.4z"/><path d="m4 7.2 8 4.4 8-4.4M12 11.6V21M8.1 5.1l8 4.4"/></svg></span><span class="method-copy"><strong>Paquetería Casa Blanca</strong><small>Entrega en 24 horas. Costo de envío: $20 MXN.</small></span></button><button class="method" id="correosBtn" onclick="selectMethod('correos')"><span class="method-icon"><i class="fa-solid fa-envelope"></i></span><span class="method-copy"><strong>Correos de México</strong><small>Entrega estimada de 17 a 25 días. Envío: $70 MXN.</small></span></button></div>
+<section id="formArea" class="checkout hidden">
+<div>
+<div class="card"><div class="card-head"><span class="step">1</span><h3>Tus datos de envío</h3></div>
+<div class="field has-icon" id="customerNameField"><label class="label">Nombre completo *</label><i class="fa-solid fa-user"></i><input id="name" autocomplete="name" placeholder="Ej. Juan Pérez"></div>
+<div class="field has-icon" id="customerPhoneField"><label class="label">WhatsApp de contacto *</label><i class="fa-solid fa-phone"></i><input id="phone" inputmode="numeric" maxlength="10" autocomplete="tel" placeholder="Ej. 3312345678"></div>
+<div class="field has-icon"><label class="label">Artículo a enviar *</label><i class="fa-solid fa-box"></i><input id="article" placeholder="Ej. Tenis blancos talla 27"></div>
+
+</div>
+<div class="card" id="branchCard"><div class="card-head"><span class="step">2</span><h3 id="locationTitle">Selecciona el punto</h3></div><div id="branchFilters" class="branch-filters hidden"></div><div id="locationGrid" class="locations"></div>
+<div id="personalSchedule" class="hidden"><div class="schedule-note"><i class="fa-solid fa-clock"></i><div><strong>Horarios disponibles:</strong><br>Lunes a viernes: 8:00 a.m.–5:00 p.m.<br>Sábado: 8:00 a.m.–3:00 p.m.<br>Domingo: 8:00 a.m.–1:00 p.m.</div></div><div class="field"><label class="label">Fecha y hora de entrega *</label><button type="button" class="calendar-trigger" id="calendarTrigger" onclick="openCalendar()"><span class="calendar-trigger-copy"><i class="fa-regular fa-calendar-days"></i><span><strong id="dateDisplayText">Seleccionar fecha y horario</strong><small>Abre el calendario para ver la disponibilidad</small></span></span><i class="fa-solid fa-chevron-right"></i></button><input type="hidden" id="deliveryDate"><input type="hidden" id="deliveryTime"></div><div class="error-box" id="scheduleError"><i class="fa-solid fa-circle-exclamation"></i><span id="scheduleErrorText"></span></div></div>
+</div>
+
+<div id="cbAddressSection" class="card hidden"><div class="card-head"><span class="step">2</span><h3>Dirección de entrega · Correos de México</h3></div><div id="addressFormPanel"><p class="address-help">Completa los datos del destinatario. Los campos con * son obligatorios.</p><div class="address-grid">
+<div class="address-field"><label for="addrName">Nombre <span class="required">*</span></label><input id="addrName" autocomplete="shipping name"></div>
+<div class="address-field"><label for="addrStreet">Calle <span class="required">*</span></label><input id="addrStreet" autocomplete="shipping address-line1"></div>
+<div class="address-field"><label for="addrExterior">Número exterior <span class="required">*</span></label><input id="addrExterior"></div>
+<div class="address-field"><label for="addrInterior">Número interior</label><input id="addrInterior"></div>
+<div class="address-field"><label for="addrColonia">Colonia <span class="required">*</span></label><input id="addrColonia"></div>
+<div class="address-field"><label for="addrZip">Código postal <span class="required">*</span></label><input id="addrZip" inputmode="text" autocomplete="shipping postal-code"></div>
+<div class="address-field"><label for="addrCity">Ciudad <span class="required">*</span></label><input id="addrCity" autocomplete="shipping address-level2"></div>
+<div class="address-field"><label for="addrState">Estado <span class="required">*</span></label><input id="addrState" autocomplete="shipping address-level1"></div>
+<div class="address-field"><label for="addrPhone">Número celular/teléfono <span class="required">*</span></label><input id="addrPhone" type="tel" inputmode="tel" autocomplete="shipping tel"></div>
+<div class="address-field"><label for="addrCountry">País <span class="required">*</span></label><input id="addrCountry" value="México" autocomplete="shipping country-name"></div>
+<div class="address-field"><label for="addrRefs">Referencias</label><textarea id="addrRefs" ></textarea></div>
+<div class="address-field"><label for="addrMaps">Enlace de Google Maps (opcional)</label><input id="addrMaps" type="url"  inputmode="url"><small style="display:block;margin-top:5px;color:#72757e">Pega el enlace para ubicar el domicilio con precisión.</small></div>
+</div></div></div>
+</div>
+<aside><div class="card"><div class="card-head"><span class="step">3</span><i class="fa-solid fa-wallet" style="color:#6f9f00"></i><h3>Aviso importante y datos de pago</h3></div>
+<div class="schedule-note"><span class="step" style="background:#efffc0;color:#5f8f00">1</span><div><strong>Realiza tu pago</strong><br>Monto total: costo de tu artículo <span id="shippingText"></span>.</div></div>
+<div class="schedule-note"><span class="step" style="background:#efffc0;color:#5f8f00">2</span><div><strong>Pedido en espera de pago</strong><br>El pedido ha sido creado, pero se encuentra en espera del pago. El envío se procesará una vez se revise el comprobante. <strong>Instrucciones:</strong> <strong>[1]. Adjunta Imagen/Captura del producto. [2]. Adjunta comprobante de Transferencia/Depósito</strong>.</div></div>
+<div class="pay"><div class="pay-title"><i class="fa-solid fa-credit-card"></i> Método de pago autorizado</div><p>Paga en OXXO o por transferencia desde tu aplicación bancaria:</p><div class="bank"><span style="background:#76a900;color:#fff;border-radius:4px;padding:3px 5px;font-size:8px">BBVA</span> Banco BBVA Bancomer</div><div class="card-number" style="margin-top:10px"><div><small>Número de tarjeta</small><strong id="cardNo">4152-3144-8467-6336</strong></div><button class="copy" onclick="copyCard()"><i class="fa-solid fa-copy"></i> Copiar</button></div></div>
+<div class="warning"><i class="fa-solid fa-circle-exclamation"></i><span><strong>¡Atención!</strong> Si no envías tu comprobante junto con el mensaje automático, tu entrega no podrá procesarse ni confirmarse.</span></div>
+</div><div class="card summary"><div class="card-head"><span class="step">4</span><h3>Revisa y finaliza</h3></div><div class="summary-line"><span>Método</span><strong id="sumMethod">—</strong></div><div class="summary-line"><span>Punto o sucursal</span><strong id="sumLocation">—</strong></div><div class="summary-line"><span>Fecha y hora</span><strong id="sumSchedule">No aplica</strong></div><div class="summary-line"><span>Tiempo estimado</span><strong id="sumETA">—</strong></div><div class="summary-line"><span>Envío</span><strong id="sumShipping">$0.00</strong></div><button class="submit" onclick="submitOrder()"><i class="fa-solid fa-circle-check"></i> Finalizar</button><p style="font-size:9px;color:#7a899c;line-height:1.5;margin:12px 0 0">La compra se confirma únicamente después de enviar el mensaje y el comprobante de pago.</p></div></aside>
+</section>
+</main>
+<button id="installBtn" class="install"><i class="fa-solid fa-download"></i> Instalar app</button>
+<div class="modal" id="calendarModal"><div class="modal-card calendar-card"><div class="calendar-top"><button type="button" class="calendar-nav" id="prevMonth" onclick="moveCalendar(-1)" aria-label="Mes anterior"><i class="fa-solid fa-chevron-left"></i></button><h3 id="calendarMonth">Calendario</h3><button type="button" class="calendar-nav" id="nextMonth" onclick="moveCalendar(1)" aria-label="Mes siguiente"><i class="fa-solid fa-chevron-right"></i></button></div><div class="calendar-week"><span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span></div><div class="calendar-days" id="calendarDays"></div><div class="calendar-hours-title">Horarios disponibles <span id="selectedDayLabel" style="color:var(--muted);font-weight:600;text-transform:none;letter-spacing:0"></span></div><div class="calendar-hours" id="calendarHours"><div class="calendar-empty">Selecciona un día para mostrar sus horarios.</div></div><div class="calendar-actions"><button type="button" class="secondary" onclick="closeCalendar()">Cancelar</button><button type="button" id="confirmScheduleBtn" onclick="confirmCalendarSelection()" disabled>Confirmar horario</button></div></div></div>
+<div class="modal" id="alertModal"><div class="modal-card"><div class="modal-icon"><i class="fa-solid fa-calendar-xmark"></i></div><h3>No es posible agendar ese horario</h3><p id="alertText"></p><button onclick="closeAlert()">Entendido</button></div></div>
+<div class="modal" id="confirmModal"><div class="modal-card"><div class="modal-icon" style="background:#f2ffd0;color:#111"><i class="fa-solid fa-clipboard-check"></i></div><h3>¿Los datos son correctos?</h3><p>Revisa tu información, método, punto de entrega y horario antes de finalizar.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px"><button type="button" onclick="closeConfirm()" style="background:#f2f2f3;color:#111">Revisar datos</button><button type="button" onclick="confirmAndSend()">Sí, finalizar</button></div></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const WA='523318297670';
+const personal=[
+{name:'UNE Tonalá',map:'https://www.google.com/maps/search/?api=1&query=UNE+Tonalá+Jalisco'},
+{name:'Comisaría Tonalá',map:'https://www.google.com/maps/search/?api=1&query=Comisaría+de+Tonalá+Jalisco'},
+{name:'Clínica 93 IMSS',map:'https://www.google.com/maps/search/?api=1&query=IMSS+Clínica+93+Tonalá'},
+{name:'Coppel Arcos Loma Dorada',map:'https://www.google.com/maps/search/?api=1&query=Coppel+Arcos+Loma+Dorada+Tonalá'},
+{name:'Plaza Altea Río Nilo',map:'https://www.google.com/maps/search/?api=1&query=Plaza+Altea+Río+Nilo'},
+{name:'Chedraui Río Nilo',map:'https://www.google.com/maps/search/?api=1&query=Chedraui+Río+Nilo'},
+{name:'Walmart Río Nilo',map:'https://www.google.com/maps/search/?api=1&query=Walmart+Río+Nilo'}];
+const branches=[
+{name:'Miramar',city:'Zapopan',address:'Calle Puerto Alegre #33, Colonia Miramar',hours:'L-V 11:00–18:00 · S 11:00–17:00'},
+ {name:'Matriz Juárez',city:'Guadalajara',address:'Pedro Moreno #776-B, Centro Guadalajara',hours:'L-V 11:00–20:00 · S 10:00–17:00 · D 11:00–15:00'},
+{name:'Norte',city:'Zapopan',address:'Calzada Federalismo #690, Auditorio Zapopan',hours:'L-V 11:00–20:00 · S 11:00–17:00'},
+{name:'Zapopan',city:'Zapopan',address:'Av. Hidalgo #241, Centro Zapopan',hours:'L-V 11:00–19:00 · S 11:00–17:00'},
+{name:'Sur',city:'Tlaquepaque',address:'Av. Cristóbal Colón #6020, Sta. María Tequepexpan',hours:'L-V 11:00–19:00 · S 11:00–17:00'},
+{name:'Tetlán',city:'Guadalajara',address:'Av. Presa Laurel #118 L4, Tetlán Guadalajara',hours:'L-V 11:00–18:00 · S 11:00–17:00'},
+{name:'Tlajomulco',city:'Tlajomulco',address:'Centro comercial San Sebastián #1915-1, Local F2',hours:'L-V 11:00–18:00 · S 11:00–17:00'},
+{name:'Oblatos',city:'Guadalajara',address:'Av. Artesanos #1135, Circunvalación Oblatos',hours:'L-V 11:00–19:00 · S 11:00–17:00'},
+{name:'Tonalá',city:'Tonalá',address:'Nicolás Bravo #40 D, Centro Tonalá',hours:'L-V 11:00–18:00 · S 11:00–17:00'},
+{name:'Tesistán',city:'Zapopan',address:'Av. Palmas #3420, Palermo Zapopan',hours:'L-V 11:00–19:00 · S 11:00–17:00'},
+{name:'Parián TLQ',city:'Tlaquepaque',address:'Plaza Cumbres, Av. Río Nilo 2329 Local 2 PB',hours:'L-V 11:00–18:00 · S 11:00–17:00'},
+{name:'Aviación',city:'Zapopan',address:'Av. Base Aérea #980, Nuevo México Zapopan',hours:'L-V 11:00–19:00 · S 11:00–17:00'}].map(x=>({...x,map:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(x.name+' '+x.address)}));
+let method='',selected=-1,deferredPrompt=null,branchCategory='Todas';
+const $=id=>document.getElementById(id), money=n=>new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(Number(n)||0), clean=v=>(v||'').trim();
+
+function selectMethod(v){
+  method=v;selected=-1;branchCategory='Todas';
+  $('formArea').classList.remove('hidden');
+  $('personalBtn').classList.toggle('active',v==='personal');
+  $('cbBtn').classList.toggle('active',v==='cb');
+  $('correosBtn').classList.toggle('active',v==='correos');
+  $('personalSchedule').classList.toggle('hidden',v!=='personal');
+  $('cbAddressSection').classList.toggle('hidden',v!=='correos');
+  $('customerNameField').classList.toggle('hidden',v==='correos');
+  $('customerPhoneField').classList.toggle('hidden',v==='correos');
+  $('branchCard').classList.toggle('hidden',v==='correos');
+  $('branchFilters').classList.toggle('hidden',v!=='cb');
+  $('locationTitle').textContent=v==='personal'?'Selecciona el punto de entrega personal':'Selecciona la sucursal Casa Blanca';
+  $('shippingText').textContent=v==='cb'?'+ $20.00 MXN de envío obligatorio':v==='correos'?'+ $70.00 MXN de envío (17 a 25 días)':'sin costo adicional de entrega';
+  renderBranchFilters();renderLocations();updateSummary();
+  setTimeout(()=>$('formArea').scrollIntoView({behavior:'smooth',block:'start'}),80)
+}
+
+function getAddressDetails(){const fields=[['addrName','Nombre'],['addrStreet','Calle'],['addrExterior','Número exterior'],['addrInterior','Número interior'],['addrColonia','Colonia'],['addrZip','Código postal'],['addrCity','Ciudad'],['addrState','Estado'],['addrPhone','Número celular/teléfono'],['addrCountry','País'],['addrRefs','Referencias'],['addrMaps','Google Maps']];if(method!=='correos')return [];for(const [id,label] of fields){if(!['addrInterior','addrRefs','addrMaps'].includes(id)&&!clean($(id).value)){showAlert('Completa el campo obligatorio: '+label+'.');$(id).focus();return null}}const maps=clean($('addrMaps').value);if(maps && !/^https:\/\/(maps\.app\.goo\.gl|(?:www\.)?google\.[^/]+\/maps|goo\.gl\/maps)(?:[/?#]|$)/i.test(maps)){showAlert('Ingresa un enlace válido de Google Maps o deja el campo vacío.');return null}if(clean($('addrPhone').value).replace(/\D/g,'').length<10){showAlert('Ingresa un teléfono válido de al menos 10 dígitos.');return null}return fields.filter(([id])=>clean($(id).value)).map(([id,label])=>`*${label}:* ${clean($(id).value)}`)}
+function renderBranchFilters(){
+  if(method!=='cb'){$('branchFilters').innerHTML='';return}
+  const categories=['Todas',...new Set(branches.map(x=>x.city))];
+  $('branchFilters').innerHTML=categories.map(category=>`<button type="button" class="branch-filter ${branchCategory===category?'active':''}" onclick="setBranchCategory('${category}')">${category}</button>`).join('')
+}
+
+function setBranchCategory(category){
+  branchCategory=category;
+  selected=-1;
+  renderBranchFilters();
+  renderLocations();
+  updateSummary()
+}
+
+function renderLocations(){
+  const source=method==='personal'
+    ? personal.map((x,index)=>({...x,originalIndex:index}))
+    : branches.map((x,index)=>({...x,originalIndex:index})).filter(x=>branchCategory==='Todas'||x.city===branchCategory);
+  if(!source.length){
+    $('locationGrid').innerHTML='<div class="branch-empty"><i class="fa-solid fa-location-dot"></i><br>No hay sucursales en esta categoría.</div>';
+    return
+  }
+  $('locationGrid').innerHTML=source.map(x=>`<article class="location ${selected===x.originalIndex?'selected':''}" onclick="chooseLocation(${x.originalIndex})"><strong>${x.name}</strong>${method==='cb'&&x.city?`<small><i class="fa-solid fa-city"></i> ${x.city}</small>`:''}${x.address?`<small>${x.address}</small>`:''}${x.hours?`<small><i class="fa-regular fa-clock"></i> ${x.hours}</small>`:''}<a class="map" href="${x.map}" target="_blank" onclick="event.stopPropagation()"><i class="fa-solid fa-map-location-dot"></i> Ver ubicación exacta</a></article>`).join('')
+}
+function chooseLocation(i){selected=i;renderLocations();updateSummary()}
+function todayLocal(){const d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,10)}
+function isoLocal(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+let calendarCursor=new Date(),tempDate='',tempTime='';
+function setupDatePicker(){calendarCursor=new Date();calendarCursor.setDate(1)}
+function openCalendar(){const saved=$('deliveryDate').value;tempDate=saved||'';tempTime=$('deliveryTime').value||'';calendarCursor=saved?new Date(saved+'T12:00:00'):new Date();calendarCursor.setDate(1);renderCalendar();$('calendarModal').classList.add('open')}
+function closeCalendar(){$('calendarModal').classList.remove('open')}
+function moveCalendar(delta){calendarCursor.setMonth(calendarCursor.getMonth()+delta);renderCalendar()}
+function renderCalendar(){const today=todayLocal(),maxDate=new Date(today+'T12:00:00');maxDate.setDate(maxDate.getDate()+89);const first=new Date(calendarCursor.getFullYear(),calendarCursor.getMonth(),1),last=new Date(calendarCursor.getFullYear(),calendarCursor.getMonth()+1,0);$('calendarMonth').textContent=first.toLocaleDateString('es-MX',{month:'long',year:'numeric'});const minMonth=new Date(today+'T12:00:00');minMonth.setDate(1);const maxMonth=new Date(maxDate.getFullYear(),maxDate.getMonth(),1);$('prevMonth').disabled=first<=minMonth;$('nextMonth').disabled=first>=maxMonth;let html='';for(let i=0;i<first.getDay();i++)html+='<button type="button" class="calendar-day empty" disabled></button>';for(let day=1;day<=last.getDate();day++){const d=new Date(first.getFullYear(),first.getMonth(),day,12),iso=isoLocal(d),disabled=iso<today||d>maxDate,classes=['calendar-day'];if(iso===today)classes.push('today');if(iso===tempDate)classes.push('selected');html+=`<button type="button" class="${classes.join(' ')}" ${disabled?'disabled':''} onclick="selectCalendarDay('${iso}')">${day}</button>`}$('calendarDays').innerHTML=html;renderCalendarHours()}
+function selectCalendarDay(iso){tempDate=iso;tempTime='';renderCalendar();}
+function availableTimes(date){if(!date)return[];const chosen=new Date(date+'T00:00:00'),day=chosen.getDay(),closeHour=day===0?13:day===6?15:17,now=new Date(),today=todayLocal(),times=[];for(let h=8;h<=closeHour;h++){for(const m of [0,30]){if(h===closeHour&&m>0)continue;const value=String(h).padStart(2,'0')+':'+String(m).padStart(2,'0');if(date===today&&new Date(date+'T'+value+':00')<=now)continue;times.push(value)}}return times}
+function renderCalendarHours(){const box=$('calendarHours'),label=$('selectedDayLabel');if(!tempDate){label.textContent='';box.innerHTML='<div class="calendar-empty">Selecciona un día para mostrar sus horarios.</div>';$('confirmScheduleBtn').disabled=true;return}label.textContent='· '+formatDateVisible(tempDate);const times=availableTimes(tempDate);if(!times.length){box.innerHTML='<div class="calendar-empty">Ya no quedan horarios disponibles para este día. Selecciona otra fecha.</div>';$('confirmScheduleBtn').disabled=true;return}box.innerHTML=times.map(t=>`<button type="button" class="time-chip ${tempTime===t?'selected':''}" onclick="selectCalendarTime('${t}')">${formatTime(t)}</button>`).join('');$('confirmScheduleBtn').disabled=!tempTime}
+function selectCalendarTime(time){tempTime=time;renderCalendarHours()}
+function confirmCalendarSelection(){if(!tempDate||!tempTime)return;$('deliveryDate').value=tempDate;$('deliveryTime').value=tempTime;$('dateDisplayText').textContent=formatDateVisible(tempDate)+' · '+formatTime(tempTime);hideScheduleError();updateSummary();closeCalendar()}
+function handleDateChange(){updateSummary()}
+function formatDateVisible(v){return new Date(v+'T12:00:00').toLocaleDateString('es-MX',{weekday:'long',day:'numeric',month:'long'})}
+function refreshTimeOptions(){}
+function formatTime(v){const [h,m]=v.split(':').map(Number),suffix=h>=12?'p.m.':'a.m.',hh=h%12||12;return `${hh}:${String(m).padStart(2,'0')} ${suffix}`}
+function validateSchedule(show=true){if(method!=='personal')return true;const date=$('deliveryDate').value,time=$('deliveryTime').value;if(!date||!time){if(show)showAlert('Selecciona una fecha y una hora disponibles para la entrega personal.');return false}const now=new Date(),dt=new Date(`${date}T${time}:00`),day=dt.getDay(),mins=dt.getHours()*60+dt.getMinutes(),close=day===0?13*60:day===6?15*60:17*60;if(dt<=now){if(show)showAlert('La fecha u hora elegida ya pasó. Selecciona un horario posterior.');return false}if(mins<8*60||mins>close){if(show)showAlert('El horario elegido está fuera del horario disponible para ese día.');return false}return true}
+function updateSummary(){const ship=method==='cb'?20:method==='correos'?70:0,arr=method==='personal'?personal:branches,loc=method!=='correos'&&selected>=0?arr[selected]:null;$('sumMethod').textContent=method==='personal'?'Entrega personal':method==='cb'?'Paquetería Casa Blanca':method==='correos'?'Correos de México':'—';$('sumLocation').textContent=loc?loc.name:method==='correos'?'Entrega a domicilio':'—';$('sumShipping').textContent=money(ship);$('sumETA').textContent=method==='cb'?'24 horas':method==='correos'?'17 a 25 días':method==='personal'?'Según fecha agendada':'—';$('sumSchedule').textContent=method==='personal'&&$('deliveryDate').value&&$('deliveryTime').value?`${formatDateVisible($('deliveryDate').value)} · ${formatTime($('deliveryTime').value)}`:'No aplica'}
+function formatDate(v){return new Date(v+'T12:00:00').toLocaleDateString('es-MX',{weekday:'short',day:'2-digit',month:'short',year:'numeric'})}
+
+let pendingWhatsAppUrl='';
+function submitOrder(){
+  const name=clean($('name').value),phone=clean($('phone').value).replace(/\D/g,''),article=clean($('article').value);
+  if(!method)return showAlert('Selecciona un método de entrega.');
+  if(!article)return showAlert('Completa el artículo a enviar.');
+  if(method!=='correos'&&(!name||phone.length!==10))return showAlert('Completa correctamente nombre y WhatsApp de 10 dígitos.');
+  if(method!=='correos'&&selected<0)return showAlert('Selecciona un punto de entrega o una sucursal.');
+  if(!validateSchedule())return;
+   const addressDetails=getAddressDetails();if(addressDetails===null)return;
+  const arr=method==='personal'?personal:branches,loc=method==='correos'?null:arr[selected],ship=method==='cb'?20:method==='correos'?70:0;
+  const schedule=method==='personal'?`${formatDate($('deliveryDate').value)} a las ${formatTime($('deliveryTime').value)}`:'No aplica';
+  const lines=[
+    `*${method==='personal'?'SOLICITUD DE ENTREGA PERSONAL':method==='cb'?'SOLICITUD DE ENVÍO PAQUETERÍA CASA BLANCA':'SOLICITUD DE ENVÍO CORREOS DE MÉXICO'} - BANIC MX*`,
+    '--------------------------------',
+    ...(method==='correos'?[]:[`*Nombre:* ${name}`,`*WhatsApp:* ${phone}`]),
+    `*Artículo:* ${article}`,
+    '',
+    `*Método:* ${method==='personal'?'Entrega personal en Tonalá':method==='cb'?'Paquetería Casa Blanca':'Correos de México'}`, 
+    `*Punto/Sucursal:* ${loc?loc.name:"Entrega a domicilio"}`
+  ];
+  if(addressDetails.length)lines.push('', '*DOMICILIO DEL DESTINATARIO*',...addressDetails);
+   if(loc?.address) lines.push(`*Dirección:* ${loc.address}`);
+  lines.push(...(loc?[`*Mapa:* ${loc.map}`]:[]));
+  if(method==='personal') lines.push(`*Fecha y hora:* ${schedule}`);
+  if(loc?.hours) lines.push(`*Horario sucursal:* ${loc.hours}`);
+  lines.push('',`*Pago BBVA:* 4152-3144-8467-6336`,`*Costo de envío:* ${money(ship)}`,'--------------------------------','El pedido ha sido creado, pero se encuentra en espera del pago. El envío se procesará una vez se revise el comprobante.','*Instrucciones:* *[1]. Adjunta Imagen/Captura del producto. [2]. Adjunta comprobante de Transferencia/Depósito*');
+  const msg=lines.join('\n');
+  pendingWhatsAppUrl=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+  $('confirmModal').classList.add('open');
+}
+function closeConfirm(){$('confirmModal').classList.remove('open')}
+function confirmAndSend(){if(!pendingWhatsAppUrl)return;window.open(pendingWhatsAppUrl,'_blank');closeConfirm()}
+function copyCard(){navigator.clipboard?.writeText('4152314484676336').then(()=>toast('Número de tarjeta copiado')).catch(()=>{const t=document.createElement('textarea');t.value='4152314484676336';document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();toast('Número de tarjeta copiado')})}
+function openBaseWhatsApp(){window.open(`https://wa.me/${WA}`,'_blank')}
+function showScheduleError(text){$('scheduleErrorText').textContent=text;$('scheduleError').classList.add('show')}function hideScheduleError(){$('scheduleError').classList.remove('show')}function showAlert(text){$('alertText').textContent=text;$('alertModal').classList.add('open')}function closeAlert(){$('alertModal').classList.remove('open')}function toast(text){$('toast').textContent=text;$('toast').classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2500)}
+// Convierte a mayúsculas los datos escritos, sin alterar enlaces de Google Maps.
+document.querySelectorAll('input:not([type="hidden"]):not([type="url"]), textarea').forEach(field=>{
+  field.style.textTransform='uppercase';
+  field.addEventListener('input',()=>{
+    const start=field.selectionStart,end=field.selectionEnd;
+    field.value=field.value.toLocaleUpperCase('es-MX');
+    if(start!==null&&end!==null)field.setSelectionRange(start,end);
+  });
+});
+setupDatePicker();
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$('installBtn').style.display='block'});$('installBtn').addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;$('installBtn').style.display='none'});window.addEventListener('appinstalled',()=>toast('Aplicación instalada'));
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script>
+</body>
+</html>
